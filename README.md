@@ -1,7 +1,7 @@
-# ECOL_596W_2024
+# ECOL_596W_2025
 
 ## Practical and Reproducible Data Science for EEB  
-### Fall 2024  
+### Fall 2025  
 
 #### Professor: Dr. Sabrina McNew (she/her/ella)  
 Email: mcnew@arizona.edu  
@@ -59,7 +59,3 @@ a little download icon underneath the word "History"
 
 https://happygitwithr.com/
 ### [Download the full syllabus here](Data_science_syllabus_mcnew.pdf)
-
-This is Natalie Morris!!!
-How I feel right now: https://xkcd.com/1597/
-Please work :'(
