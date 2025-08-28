@@ -59,3 +59,7 @@ a little download icon underneath the word "History"
 
 https://happygitwithr.com/
 ### [Download the full syllabus here](Data_science_syllabus_mcnew.pdf)
+
+### Where are the lectures? 
+https://emailarizona-my.sharepoint.com/:f:/g/personal/mcnew_arizona_edu/ElMTX3eWa0dDiy4G4a7BeNMBbbHlrrTqzoQLCcG2w1g3ag?e=pfRfO4
+
