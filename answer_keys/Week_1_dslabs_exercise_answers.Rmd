@@ -74,6 +74,11 @@ sqrt(100) |> log10()
 # Answer: log(exp(x)). 
 x = 0
 log(exp(x))
+
+x <- 1 
+log(10^x)
+
+
 ```
 
 6. Make sure the US murders dataset is loaded. Use the function str to examine the structure of the murders object. Which of the following best describes the variables represented in this data frame?
