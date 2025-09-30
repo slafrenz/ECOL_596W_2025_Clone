@@ -21,8 +21,14 @@ Please answer these questions in R using whatever syntax makes sense to you. Fee
 
 **If you use Google or ChatGPT etc. to help you get to an answer, please note so on your answer**
 
-Submit your answers as an html file. Name it "lastname_quiz1.html". Two submission options:\
-1. Create a branch in your forked-and-cloned class repo. Add the html file to the student_contributions/ folder. Submit a pull request to Sabrina (preferred); 2. Email it to mcnew\@arizona.edu (if github is really giving you a headache)
+Step 1. ARE YOU IN A BRANCH?????  
+Step 2. Save this file as lastname_quiz.qmd in the same quiz folder.  
+Step 3. Once you are done, click "render" above. This will create the .html file
+that I will evaluate.  
+Step 4. Stage and commit your changes, push to your github.  
+Step 5. Submit a pull request. If github warns you of conflicts please try and fix them
+before submitting your pull request (did you rename the file??? ).  
+(Step 6. In case of utter disaster, email Sabrina your .html file.)  
 
 ```{r, message = F}
 # load packages and data 
@@ -41,7 +47,7 @@ Load the *swallows.csv* into R, call it swallows. This data frame lists results 
 You also have a separate data frame called *brightness.csv* where each row lists the plumage brightness (a sexual signal) for the female at each nest. Load this one up too.
 
 ```{r}
-# Answer 
+# Type your answer in this box using R code 
 
 
 # Google? y/n
