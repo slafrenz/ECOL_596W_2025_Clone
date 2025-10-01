@@ -46,11 +46,9 @@ You also have a separate data frame called *brightness.csv* where each row lists
 
 ```{r}
 # Type your answer in this box using R code 
-swallows <- read.csv('swallows.csv')
-brightness <- read.csv('brightness.csv')
+
 
 # Google? y/n
-#n
 
 
 
@@ -62,13 +60,10 @@ You realize that you want to add brightness information onto your main swallows 
 
 ```{r}
 #Answer
-full_df <- swallows %>% 
-  full_join(brightness, by=join_by(nestbox==nestbox))#, keep = T)
 
-# Initially using the keep=True argument in full_join function allows for checking that joined dataframe properly matched each key
+
 
 #Google? 
-#n
 
 
 ```
@@ -77,34 +72,17 @@ Inspect your combined data frame. Do some sort of quick sanity check on each col
 
 ```{r}
 # Answer
-full_df <- na.omit(full_df)
-class(full_df$nestbox) # familiarize with datatypes across all columns
-
-full_df$nestbox <- as.factor(full_df$nestbox)
-full_df$treatment <- as.factor(full_df$treatment) # See that we are plotting later on, so just convert to factor now
-
-length(unique(full_df$nestbox)) # should have 41 unique boxes and only two treatments
-
-quantile(full_df$brood) # check that numbers for brood, n_fledged, brightness don't look unreasonable (no weird outliers that may be misinputs)
-
-unique(full_df$brood >= full_df$n_fledged) # The number of nestlings that fledged should never exceed the initial brood number. If we get False here, something is wrong.
 
 # Google y/n 
-#n
 ```
 
 Create a new column called prop_fledged that contains the proportion of nestlings that fledged from each nest.
 
 ```{r}
 #Answer
-full_df <- full_df %>% 
-  mutate(prop_fledged = n_fledged/brood)
-
-# Could set NA values to zero here. Would get different summary results. Not doing because not correct mathematically.
-#full_df$prop_fledged <- data.table::nafill(full_df$prop_fledged, fill=0)
 
 # Google? y/n
-#n
+
 ```
 
 #### Explore the data
@@ -114,24 +92,15 @@ What was the mean proportion of nestlings fledged in each treatment?
 ```{r}
 # Answer 
 
-full_df %>% 
-  group_by(treatment) %>% 
-  summarise(mean(na.omit(prop_fledged))) # Just omiting NA's here 
-
 
 # Google? y/n
-#n
+
 ```
 
 Create a plot showing fledging success differences between treatments
 
 ```{r}
 # Answer
-full_df %>% 
-  ggplot(aes(x=treatment, y=prop_fledged)) +
-  geom_boxplot() +
-  labs(title = 'Fledging Success Across Treatments', y='Proportion of Nestlings Fledged Per Nest',
-       x='')
 
 # Google? y/n
 
@@ -142,10 +111,6 @@ Is there any evidence that female brightness influenced fledging success? Create
 
 ```{r}
 # Answer
-full_df %>% 
-  ggplot(aes(x=brightness, y=prop_fledged)) +
-  geom_point() +
-  labs(title = 'Effects of Female Brightness on Fledging Success', y='Proportion of Nestlings Fledged', x='Female Brightness')
 
 # Google? y/n
 
