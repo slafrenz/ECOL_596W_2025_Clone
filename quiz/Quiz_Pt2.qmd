@@ -51,9 +51,6 @@ brightness <- read.csv('brightness.csv')
 
 # Google? y/n
 #n
-
-
-
 ```
 
 #### Wrangle your data
@@ -100,8 +97,7 @@ Create a new column called prop_fledged that contains the proportion of nestling
 full_df <- full_df %>% 
   mutate(prop_fledged = n_fledged/brood)
 
-# Could set NA values to zero here. Would get different summary results. Not doing because not correct mathematically.
-#full_df$prop_fledged <- data.table::nafill(full_df$prop_fledged, fill=0)
+# There are NA values here due to divisions by zero in brood number. Will omit these later
 
 # Google? y/n
 #n
@@ -134,6 +130,7 @@ full_df %>%
        x='')
 
 # Google? y/n
+#n
 
 
 ```
@@ -145,8 +142,11 @@ Is there any evidence that female brightness influenced fledging success? Create
 full_df %>% 
   ggplot(aes(x=brightness, y=prop_fledged)) +
   geom_point() +
-  labs(title = 'Effects of Female Brightness on Fledging Success', y='Proportion of Nestlings Fledged', x='Female Brightness')
+  labs(title = 'Effects of Female Plumage Brightness on Fledging Success', y='Proportion of Nestlings Fledged', x='Female Brightness')
 
 # Google? y/n
+#n
 
 ```
+
+This data does not support the hypothesis that female plumage brightness has an effect on nestling fledging because there is no discernible relationship between these features in our scatter plot.
